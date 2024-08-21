@@ -1,0 +1,341 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+.container-main{
+    background-color: white;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow:  0 0 8px rgba(250,250,250,0.6);
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header{
+    position: relative;
+    height: 47vh;
+    background-image: url('1723819772804.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(220, 71, 71);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.header-content{
+    position: relative;
+    z-index: 1;
+}
+h1{
+    font-size: 4rem;
+    margin: 0 0 1rem;
+}
+nav{
+    font-size: 1.4rem;
+}
+nav a{
+    color:  rgb(220, 71, 71);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+@media(max-width: 768px) {
+    h1{
+        font-size: 3rem; 
+    }
+    nav{
+        font-size: 2rem;
+    }
+}
+/* Basic styles for the container and cards */
+.container1 {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cart {
+    background-color: rgb(252, 219, 219);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 100%; /* Cards take full width on small screens */
+    max-width: 300px; /* Maximum width for cards */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .cart {
+        flex: 1 1 45%; /* Two cards per row */
+        max-width: 45%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .cart {
+        flex: 1 1 30%; /* Three cards per row */
+        max-width: 30%;
+    }
+}
+
+
+
+
+/*
+.container1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .cart {
+   display: flex;
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 0 20px;
+    box-shadow: #66afe9;
+    background: rgb(253, 230, 230);
+  }
+  .cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(76, 3, 3);
+  }
+  .cart p {
+    line-height: 1.5;
+    width: 250px;
+    color: #4d4c4c;
+  }
+  
+  @media (max-width: 768px) {
+    .container-main {
+      flex-direction: column;
+    }
+    .cart {
+      width: 100%;
+      margin: 20px 0;
+    }
+  } */
+  .row1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    background: #fff;
+}
+/* Basic styles for the form container */
+.contact-form {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px; /* Maximum width for larger screens */
+    
+   box-sizing: border-box;
+}
+
+/* Style for form elements */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+    margin-bottom: 15px; /* Space between form elements */
+    padding: 10px; /* Padding inside the form elements */
+    border: 1px solid #151717; /* Border around the form elements */
+    border-radius: 4px; /* Rounded corners for form elements */
+    background-color:  rgb(252, 219, 219);
+}
+
+/* Style for textarea */
+.contact-form textarea {
+    resize: vertical; /* Allows only vertical resizing */
+}
+
+/* Style for the submit button */
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(21, 97, 21); /* Bootstrap primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(220, 71, 71); /* Darker shade on hover */
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    .contact-form input, .contact-form textarea {
+        margin-bottom: 10px; /* Reduced space between form elements */
+    }
+}
+
+/* For screens smaller than 576px (mobile phones) */
+@media (max-width: 576px) {
+    .contact-form input, .contact-form textarea {
+        padding: 8px; /* Reduced padding inside form elements */
+    }
+
+    .contact-form button {
+        padding: 12px; /* Increased padding for better touch targets */
+    }
+}
+
+
+
+/*
+form input{
+    width: 100%;
+    height: 50px;
+    margin: 4px 0;
+    margin-bottom: 10px;
+    border: 1px solid #151717;
+    border-radius: 3px;
+    background: rgb(252, 219, 219);
+    padding: 10 15px;
+    font-size: 16px;
+}
+.contact-form{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex: 50%;
+    padding: 30px;
+    padding-left: 30px;
+    padding-block-end: 5px;
+    justify-content: space-between;
+    justify-content: center;
+    border-radius: 5px;
+} */
+
+#map {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-color: #e0e0e0; /* Optional: background color for map placeholder */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    #map {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  @media (max-width: 480px) {
+    #map {
+      height: 200px; /* Further adjust height for very small screens */
+    }
+  }
+
+
+/*.contact-form1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+input[type=text], input[type=email]{
+    width: 225px;
+    padding: 4px 3x;
+    margin: 6px 0;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: -18px;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+input[id=subject]{
+    width: 100%;
+    padding: 10px 6x;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: -1px;
+    margin-bottom: 18px
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 4px solid #ccc;
+    border-radius: 4px;
+    background-color:  rgb(252, 219, 219);
+    font-size: 16px;
+    resize: vertical;
+    font-family: inherit;
+    margin-bottom: 16px
+}
+textarea:focus{
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 8xp rgba(102, 175, 233, 0.6);
+}
+form button{
+    margin-top: 5px;
+    border: 3px;
+    background: rgb(21, 97, 21);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 3px;
+    align-items: left;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(220, 71, 71);
+}
+@media (max-width: 768px){
+    .contact-form{
+        padding: 15px;
+    }
+    .contact-form1, .contact-form textarea{
+        font-size: 14px;
+    }
+    .contact-form button[type="submit"]{
+        font-size: 16px;
+    }
+} */

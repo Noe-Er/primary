@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="Contact.css">
+    </head>
+    <body>
+     <div class="container-main">
+      <header class="header"> 
+        <div class="header-content">
+      <h1>Contact Us</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div></header>
+      <div class="container1">
+      <div class="cart">
+        <h2>Mission</h2>
+        <p>Our mission is to provide high-quality education that exceeds parent's expectations and contribute to the betterment of the community.</p>
+      </div>
+      <div class="cart">
+        <h2>Vision</h2>
+        <p>Our vision is to be our country's leading knowledge provider, recognized for our innovation, excellence, and commitment to sustainable teaching practices.</p>
+      </div>
+      <div class="cart">
+        <h2>Values</h2>
+        <p>Our core values include integrity, teamwork, continuous improvement, and social responsibility.</p>
+      </div>
+    </div><br>
+    <div class="row1">
+         <div class="contact-form">
+        <form>
+          <div class="contact-form1">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required></div>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required><br>
+            <textarea name="message" placeholder="Message" rows=8 cols=25 wrap></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+        <div class="contact-form">
+       <div id="map"></div>
+      </div>
+        </div>
+      </div>
+     </div>
+     <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+          }
+      )
+        })
+      });
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: {lat: 4.1540, lng: 9.2385} // Centered on Buea, Cameroon
+          });
+    
+          // Add markers for points of interest in Buea
+          var pointsOfInterest = [
+            {lat: 4.1540, lng: 9.2385, name: 'University of Buea'},
+            {lat: 4.1465, lng: 9.2321, name: 'Mount Cameroon'},
+            {lat: 4.1580, lng: 9.2432, name: 'Molyko Stadium'},
+            {lat: 4.1471, lng: 9.2376, name: 'Bongo Square'},
+            {lat: 4.1495, lng: 9.2361, name: 'Lake Koke'}
+          ];
+    
+          for (var i = 0; i < pointsOfInterest.length; i++) {
+            var poi = pointsOfInterest[i];
+            var marker = new google.maps.Marker({
+              position: {lat: poi.lat, lng: poi.lng},
+              map: map,
+              title: poi.name
+            });
+    
+            // Add a click event listener to the marker
+            marker.addListener('click', function() {
+              map.setZoom(14);
+              map.setCenter(this.getPosition());
+            });
+          }
+        }
+      </script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+      </script>
+    </body>
+</html>
